@@ -18,9 +18,7 @@ function generateFakeData(startIndex, limit, seed, locale) {
     if (seed) {
         fakerLocale.seed(seed);
     }
-
     for (let i = 0; i < limit; i++) {
-
         data.push({
             number: startIndex + i + 1,
             id: fakerLocale.string.uuid(),
@@ -33,12 +31,7 @@ function generateFakeData(startIndex, limit, seed, locale) {
 }
 
 function filterData(data, filters) {
-    if (filters.name) {
-        data = data.filter(item => item.name.toLowerCase().includes(filters.name.toLowerCase()));
-    }
-    if (filters.email) {
-        data = data.filter(item => item.email.toLowerCase().includes(filters.email.toLowerCase()));
-    }
+
     return data;
 }
 
